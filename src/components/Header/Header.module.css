@@ -1,0 +1,8 @@
+@media screen and (max-width: 460px) {
+  .header {
+    font-size: 0.85rem;
+  }
+  .total-cart-items {
+    display: none;
+  }
+}

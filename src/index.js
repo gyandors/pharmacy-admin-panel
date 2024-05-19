@@ -6,9 +6,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 import App from './App';
+import { MedicineContextProvider } from './context/MedicineContext';
+import { CartContextProvider } from './context/CartContext';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <CartContextProvider>
+    <MedicineContextProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </MedicineContextProvider>
+  </CartContextProvider>
 );

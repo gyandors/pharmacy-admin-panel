@@ -1,34 +1,33 @@
 import { Route, Switch } from 'react-router-dom';
 
-import Header from './components/Header';
-import Home from './pages/Home';
-import Medicines from './pages/Medicines';
-import AddMedicine from './pages/AddMedicine';
-import NotFound from './pages/NotFound';
+import HomePage from './pages/HomePage';
+import MedicinesPage from './pages/MedicinesPage';
+import AddMedicinePage from './pages/AddMedicinePage';
+import NotFoundPage from './pages/NotFoundPage';
 
-function App() {
+import Header from './components/Header/Header';
+
+export default function App() {
   return (
     <>
       <Header />
       <Switch>
         <Route path="/" exact>
-          <Home />
+          <HomePage />
         </Route>
 
         <Route path="/medicines">
-          <Medicines />
+          <MedicinesPage />
         </Route>
 
         <Route path="/add-medicine">
-          <AddMedicine />
+          <AddMedicinePage />
         </Route>
 
         <Route>
-          <NotFound />
+          <NotFoundPage />
         </Route>
       </Switch>
     </>
   );
 }
-
-export default App;
